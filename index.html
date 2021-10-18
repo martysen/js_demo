@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/style_template.css">
     <!-- <script src="/js/enter_user_name.js" crossorigin="anonymous"> </script> -->
 
+    <!-- Defer is a boolean attribute that makes sure that first the page loads before loading any script -->
+    <script src="./js_basic_tutorial/main.js" defer></script>
 
 </head>
 <body>
@@ -17,11 +19,11 @@
 
     <main>
         <h2>JavaScript Adds Interactive Behavior to Pages</h2>
-        <p>Click to Enter Player 1 Name:</p>
+        <!-- <p>Click to Enter Player 1 Name:</p> -->
+        <p>Open the developer tools of your browser and select the console feature</p>
     </main>
 
-
-    <script>
+    <!-- <script>
         //define an object and associate it to the HTML element you want to interact with
         const para = document.querySelector('p');
 
@@ -33,7 +35,7 @@
             let name = prompt('Enter Your Name');
             para.textContent = 'Player 1:' + name;
         }
-    </script>
+    </script> -->
     
 </body>
 </html>
