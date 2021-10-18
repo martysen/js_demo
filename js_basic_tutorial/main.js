@@ -238,7 +238,7 @@ const todoList = [
     {
         id: 3,
         item: 'complete phase 1 report',
-        isCompleted: true
+        isCompleted: false
     }
 
 ];
@@ -320,6 +320,144 @@ for (let todoItem of todoList) { // todoItem is a variable name for the iterator
     console.log(todoItem);
     
 }
+
+/******************************************************************************************************** */
+// High order array methods to iterate through arrays 
+// 1. forEach
+// 2. map - create a new array from an existing array 
+// 3. filter - create a new array from an existing array based on certain conditions 
+
+// forEach
+/*
+arrayName.forEach( function(variableName, otherParameters) {
+    //body of loop
+});
+Note - These can be also coded with the arrow functions =>
+*/
+console.log('My item list of todo item printed using forEach is as follows:');
+todoList.forEach(function(todoItem){
+    console.log(todoItem.item);
+});
+
+// map : returns an array 
+// Say you want to create an array containing only the item descriptions of your todo list
+const listItems = todoList.map( function(todoItem) {
+    return todoItem.item;
+});
+console.log(`My todo items generated using the map method is: ${listItems}`);
+
+// filter: returns array based on criteria
+// say you want to create an array where the isCompleted is true and map it to a new array 
+const listItemsCompleted = todoList.filter( function(todoItem){
+    return todoItem.isCompleted === true;   // NOTE HOW WE USED ===. There is a difference between == and === shown in the next segment of conditional statements
+}).map(function(todoItem){      // note how we have added another method to the end of a method
+    return todoItem.item;
+})
+console.log(`To do items that are completed printed using Array.filter().map() are: ${listItemsCompleted}`); // this will not show the third item since it is false. 
+
+/************************************************************************************************** */
+// CONDITIONAL STATEMENTS 
+
+// SIMPLE IF STATEMENTS 
+const variableIF = 20;
+
+if (variableIF == 20) {
+    console.log('if statement value is equals 20');
+}
+
+// IMPORTANT PROG. NOTE: DIFFERENCE BETWEEN == AND ===
+// == does not match the datatype i.e. if const varName = '10' or const varName = 10, if (varName == 10) will return true for both cases 
+// === matches both the value and the data type. therefore in the previous statement the if condition with varName = '10' will be false.
+// Note - always safe to use ===. 
+
+
+// IF ELSE
+if (variableIF === 21) {
+    console.log('Inside the IF condition');
+    
+} else {
+    console.log('Inside the ELSE condition');
+    
+}
+
+// IF ELSE IF chain
+if (variableIF === 5) {
+    console.log('varibale is equal to number 5');    
+}   else if (variableIF > 10) {
+    console.log('variable is greater than number 10');
+} 
+else {
+    console.log('variable is less than or equal to number 10 but not equal to number 5');    
+}
+
+// COMBINING MULTIPLE CONDITIONS - LOGICAL OPERATORS
+// != (not equal to), !== (not equal to value and type), 
+// && logical AND, || logical OR, ! logical NOT 
+// Try yourself -- write an IF ELSE statement to check if a value is between 5 and 10 
+
+
+// TERNARY OPERATOR: A SHORTHAND IF USED TO ASSIGN VALUE TO VARIABLES BASED ON A CONDITION
+// syntax: variablename = (condition) ? value1:value2; // value1 is assigned if condition is true else value2 is assigned
+// Example: Say you want to set a boolean variable to true (or false) if the age of a person is 18 or above 
+let citizenAge = 17;
+const canVote = (citizenAge >= 18 ) ? true:false;
+// The above statement is interpreted as: (IF condition true) THEN (?) set value 1 ELSE (:) set value 2
+console.log(canVote);
+
+// SWITCH CASE STATEMENTS 
+// NOTE: case keys can be strings. You can write case 'colorName': ....
+const userChoice = 2;
+switch (userChoice) {
+    case 1: console.log('User choose the first item');
+        break; // don't forget the break statements or you'll get logical errors
+    case 2: console.log('User choose the 2nd item');        
+        break;
+    default: console.log('User choose neither 1st or 2nd Item. Check input value');
+        break;
+}
+
+
+/******************************************************************************************************************************* */
+
+// FUNCTIONS
+
+// BASIC FUNCTIONS
+
+// define function body
+function sum(parameter1, parameter2) {
+    console.log(`Sum of two input values are: ${parameter1 + parameter2}`);    
+}
+// function call
+sum(2,3);
+
+// function body with default parameter values 
+function sumDefault(para1 = 2, para2 = 6) {
+    console.log(`Sum of two input values to sumDefault() are: ${para1 + para2}`);    
+}
+sumDefault(); // Although no arguements given it will still return 8 as result
+// If you give values, it will overwrite the default values 
+sumDefault(20,40);
+
+// Prog Note : For demo of syntax, we have used console.log in the function body. But usually functions will end with a return statement
+function multiplyTwoNumbers(inputVal1, inputVal2) {
+    return inputVal1*inputVal2;
+}
+console.log(`The multiple of two values using function is ${multiplyTwoNumbers(8,9)}`); 
+
+
+// The Arrow Function : introduced in ES 6. A cleaner and compact way to create functions 
+// Below is an example of a division method written using the arrow function 
+const divisionOutput = (divisionInput1 = 1, divisionInput2 = 1) => {
+    return divisionInput1 / divisionInput2
+} 
+console.log(`The division output is ${divisionOutput(10,2)}`);
+
+// Prog. NOTE: Read this for more info - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+// At the begining this may be a bit challenging. At begining if you are not comfy use traditional way. But remember => is basically a function
+
+
+
+
 
 
 
