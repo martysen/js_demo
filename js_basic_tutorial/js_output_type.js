@@ -10,6 +10,7 @@
     6. Conditionals statements - if-else, ternary, switch-case 
     7. Functions (normal functions and arrow functions)
     8. OOP (prototypes and classes)
+    *Later Lectures*
     9. DOM selection & DOM manipulation 
     10. Events 
     11. Basic Form Validation
