@@ -9,6 +9,7 @@ h1, h2{
     margin: auto;
     border: 2px;
     padding: 2px;
+    clear: both;
 }
 
 p{
@@ -24,4 +25,22 @@ p{
     color: red;
     text-transform: capitalize;
     cursor: pointer;
+}
+
+nav>a{
+    display: inline-block;
+    position: relative;
+    top: 10px;
+    margin: 2px;
+    padding: 2px;
+    border: 1px dotted black;
+    text-align: center;
+    font-size: large;
+    color:maroon;
+    cursor: pointer;
+}
+
+nav>a:hover{
+    color: red;
+    background-color:black;
 }
