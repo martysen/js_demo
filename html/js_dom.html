@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="../css/startbootstrap-freelancer-gh-pages/css/styles.css">
 
     <!-- <script src="../js_dom_tutorial/js_dom_part1.js" defer></script> -->
-    <script src="../js_dom_tutorial/js_dom_part2.js" defer></script>
+    <!-- <script src="../js_dom_tutorial/js_dom_part2.js" defer></script> -->
+    <script src="../js_dom_tutorial/js_dom_part3.js" defer></script>
 
 </head>
 <body>
@@ -26,6 +27,16 @@
             <h2 class="title"> Add Items</h2>
             <form class="form-inline mb-3">
                 <input type="text" class="form-control mr-2">
+
+                <!-- the SELECT ELEMENT giving choices and taking polls etc. -->
+                <hr>
+                <!-- <select class="form-control mr-2"> -->
+                <select>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+                <hr>
                 <input type="submit" class="btn btn-dark" value="Submit">
             </form>
             <h2 class="title">Items</h2>
@@ -35,7 +46,22 @@
                 <li class="list-group-item">Item 3</li>
                 <li class="list-group-item">Item 4</li>
             </ul>
+            <!-- A randong div elem to test out some event listener features -->
+            <div id="randomDiv"></div>
+            <!-- Following code is for demo to EVENTS in JS -->
+            <hr>
+            <button class="btn btn-dark btn-block" id="demoButton">I am an HTML Button. Click Me!!</button>
+            <!-- Below Statement shows inline way of adding events. Note you should NOT use this anymore -->
+            <!-- <hr>
+            <button onclick="alert('You Clicked A button on this page!!')" class="btn btn-dark btn-block" id="button">Click This Button with Inline event</button> -->
+            <!-- Below Statement shows inline way of adding events with a function call. Note you should NOT use this anymore -->
+            <!-- <hr>
+            <button onclick="buttonClicked()" class="btn btn-dark btn-block" id="button">Click This Button with Inline event and JS Function Call</button> -->
 
+            <!-- Some HTML elements to test out some other types of events which cannot use the button element -->
+            <hr>
+            <div id="randomDivBox" style="width:500px;height: 300px; background-color: antiquewhite;">
+            </div>
         </div>
 
     </div>
